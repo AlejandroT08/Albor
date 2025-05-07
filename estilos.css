@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.banner {
+  background-image: url(logo.png);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6);
+  border:none;
+}
+.degradado-texto {
+  background-image: linear-gradient(to bottom, #8c8a31, #7005c1); /* azul negro */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.degradado-texto1 {
+  background-image: linear-gradient(to bottom, #8c8a31, #7005c1); /* Rojo Azul */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.degradado-texto-webkit {
+  background: -webkit-linear-gradient(top, #8c8a31, #7005c1); /* dorado amarillo */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.degradado-texto2 {
+  background: -webkit-linear-gradient(top, #8c8a31, #7005c1); /* dorado amarillo */
+  -webkit-background-clip: text;
+  color: transparent;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #333;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 30px;
+}
+
+.servicio {
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.carousel-item {
+  height: 1000px;
+}

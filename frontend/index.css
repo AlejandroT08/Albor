@@ -27,23 +27,6 @@ header {
   border:none;
 }
 
-.degradado-texto1 {
-  background-image: linear-gradient(to bottom, #8c8a31, #7005c1); /* Rojo Azul */
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.degradado-texto-webkit {
-  background: -webkit-linear-gradient(top, #8c8a31, #7005c1); /* dorado amarillo */
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.degradado-texto2 {
-  background: -webkit-linear-gradient(top, #8c8a31, #7005c1); /* dorado amarillo */
-  -webkit-background-clip: text;
-  color: transparent;
-}
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -88,26 +71,49 @@ form input[type="submit"] {
   border: none;
   cursor: pointer;
 }
-.carousel-item {
-  height: 450px;
-  object-fit: cover; 
-  object-position: center 50%;
+.font-text {
+  text-align: left;
+  margin-bottom: 5%;
+  margin-right: 50%;
+  margin-left: 5%;
 }
-
 .hero-image {
+  height: 450px;
+  object-fit: cover;
   width: 100%;
-  height: 80% ;
-  filter: brightness(0.8);
-
-} 
-.carousel-image {
-  /* Estilos base de la imagen */
-  transform: scale(1); /* Escala inicial */
-  transition: transform 0.3s ease-in-out; /* Transición suave para la propiedad transform */
+  display: block; /* Asegúrate de que la imagen sea un bloque */
 }
 
-.carousel-image.active, /* Si usas una clase 'active' para la imagen visible */
-.carousel-item:focus .carousel-image, /* Si el item del carrusel puede tener foco */
-.carousel-item:hover .carousel-image { /* O al hacer hover en el item */
-  transform: scale(1.05); /* Ligeramente más grande al estar activa/enfocada/hover */
+.custom-h5{
+  font-family: "Tenor Sans", sans-serif;
+  font-style: italic;
+  font-size: 31.0px;
+  display: block;
+  font-weight:400;
+  letter-spacing: 0.0em;
+  line-height: 1.2;
+  color: #ffff;
+  text-align:start;
+  margin-bottom: 0px;
+}
+
+.custom-p{
+  font-size: 1rem;
+  color: #ffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-overlay-container {
+  position: relative; /* Necesario para posicionar la capa oscura */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+  z-index: 1; /* Asegura que la capa oscura esté encima de la imagen */
 }

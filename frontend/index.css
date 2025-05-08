@@ -55,7 +55,6 @@
   height: 70px;
   
 }
-<<<<<<< HEAD:estilos.css
 /* Estilos para la lista ul (contenedor) */
 .nav {
   /* Ejemplo para modificar el espaciado entre los elementos de la lista */
@@ -82,7 +81,6 @@
   padding: 0.5em 1em; /* 0.5em arriba/abajo, 1em izquierda/derecha */
   text-decoration: none; /* Eliminar el subrayado predeterminado */
   font-family:"garamont";
-=======
 
 nav ul {
   list-style-type: none;
@@ -90,7 +88,6 @@ nav ul {
   padding: 10px;
   background-color: #333;
   text-align: center;
->>>>>>> develop:frontend/index.css
 }
 
 .nav-link:hover {
@@ -111,8 +108,6 @@ nav ul {
 }
 
 
-<<<<<<< HEAD:estilos.css
-=======
 section {
   padding: 30px;
 }
@@ -180,4 +175,3 @@ form input[type="submit"] {
   background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
   z-index: 1; /* Asegura que la capa oscura esté encima de la imagen */
 }
->>>>>>> develop:frontend/index.css

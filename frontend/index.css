@@ -117,3 +117,99 @@ form input[type="submit"] {
   background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
   z-index: 1; /* Asegura que la capa oscura esté encima de la imagen */
 }
+
+/* Estilos para el color de las letras de los enlaces del header */
+.header-link {
+  color: #de7309; /* Color de texto por defecto */
+
+}
+
+.header-link:hover {
+  color: #007bff; /* Color de texto al pasar el ratón */
+}
+
+/* Estilos base para los botones personalizados */
+.custom-button {
+  /* Puedes añadir estilos generales como el tipo de fuente, padding, etc. */
+  font-weight: bold;
+  
+}
+
+/* Estilos para el botón de contorno este es iniciar sesion */
+.custom-button.outline {
+  color: #530a5869 ; /* Color del texto y el borde */
+  border-style: none;
+  font-weight:800 !important;
+}
+
+.custom-button.outline:hover {
+  background-color: #530a5869;
+  color: #ffff;
+  border-style: none;
+}
+
+/* Estilos para el botón primario este es registrate */
+.custom-button.primary {
+  background-color: #530a5869;
+  color: #ffff;
+  border-style: none;
+  font-weight: 800;
+}
+
+.custom-button.primary:hover {
+  background-color: #ffff;
+  border-style: none;
+  color:#530a58
+}
+
+.fondo-header{
+  background-color: #ffff;
+  background-size:cover ;
+  background-position: center;
+  height: 70px;
+  
+}
+/* Estilos para la lista ul (contenedor) */
+.nav {
+  /* Ejemplo para modificar el espaciado entre los elementos de la lista */
+  gap: 15px; /* Espacio de 15 píxeles entre los li */
+}
+
+/* Estilos para cada elemento li */
+.nav li {
+  /* Ejemplo para añadir un margen */
+  margin-right: 10px; /* Margen a la derecha de cada elemento */
+  /* Puedes añadir otros estilos si es necesario */
+}
+
+/* Estilos para los enlaces dentro de la lista (la etiqueta <a> con las clases nav-link y header-link) */
+.nav-link {
+  /* Tamaño de la fuente */
+  font-size: 1.6em !important; /* 1.6 veces el tamaño de fuente predeterminado */
+  /* Color del texto */
+  color: #530a58 !important; /* Color de texto por defecto */
+  /* Bordes */
+  border: 1px solid transparent; /* Borde transparente por defecto */
+  border-radius: 5px; /* Bordes redondeados */
+  /* Padding para dar espacio alrededor del texto */
+  padding: 0.5em 1em; /* 0.5em arriba/abajo, 1em izquierda/derecha */
+  text-decoration: none; /* Eliminar el subrayado predeterminado */
+  font-family:"garamont";
+}
+
+.nav-link:hover {
+  /* Estilos al pasar el ratón */
+  color: #007bff; /* Cambiar el color del texto */
+  border-color: #007bff; /* Cambiar el color del borde */
+  background-color: #e9ecef; /* Añadir un fondo al pasar el ratón */
+}
+
+/* Estilos específicos para la clase header-link (si quieres diferenciarlos) */
+.header-link {
+  /* Puedes añadir estilos que solo se apliquen a los enlaces del header aquí */
+  font-weight: bold; /* Ejemplo: texto en negrita */
+}
+.link-secondary2{
+  -webkit-text-stroke:0.3px #FFD700;
+  color: #530a58 !important ;
+}

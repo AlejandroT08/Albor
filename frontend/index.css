@@ -55,6 +55,7 @@
   height: 70px;
   
 }
+<<<<<<< HEAD:estilos.css
 /* Estilos para la lista ul (contenedor) */
 .nav {
   /* Ejemplo para modificar el espaciado entre los elementos de la lista */
@@ -81,6 +82,15 @@
   padding: 0.5em 1em; /* 0.5em arriba/abajo, 1em izquierda/derecha */
   text-decoration: none; /* Eliminar el subrayado predeterminado */
   font-family:"garamont";
+=======
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  background-color: #333;
+  text-align: center;
+>>>>>>> develop:frontend/index.css
 }
 
 .nav-link:hover {
@@ -101,3 +111,73 @@
 }
 
 
+<<<<<<< HEAD:estilos.css
+=======
+section {
+  padding: 30px;
+}
+
+.servicio {
+  margin-bottom: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+form input[type="submit"] {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.font-text {
+  text-align: left;
+  margin-bottom: 5%;
+  margin-right: 50%;
+  margin-left: 5%;
+}
+.hero-image {
+  height: 450px;
+  object-fit: cover;
+  width: 100%;
+  display: block; /* Asegúrate de que la imagen sea un bloque */
+}
+
+.custom-h5{
+  font-family: "Tenor Sans", sans-serif;
+  font-style: italic;
+  font-size: 31.0px;
+  display: block;
+  font-weight:400;
+  letter-spacing: 0.0em;
+  line-height: 1.2;
+  color: #ffff;
+  text-align:start;
+  margin-bottom: 0px;
+}
+
+.custom-p{
+  font-size: 1rem;
+  color: #ffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-overlay-container {
+  position: relative; /* Necesario para posicionar la capa oscura */
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+  z-index: 1; /* Asegura que la capa oscura esté encima de la imagen */
+}
+>>>>>>> develop:frontend/index.css

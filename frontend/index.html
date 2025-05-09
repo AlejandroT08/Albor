@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <!--dsds-->
+<html lang="es"> 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Albor</title>
     <link rel="stylesheet" href="index.css">
@@ -12,27 +12,28 @@
 </head>
 <body >
 
-    <header class="fondo-header d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom header-custom-style">
+    <header class="fondo-header d-flex flex-wrap align-items-center justify-content-between py-3 mb-1 border-bottom header-custom-style px-3 px-md-4">
         <div class="col-md-3 mb-2 mb-md-0">
-          <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-            <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
+            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <svg class="bi banner" width="59" height="48" role="img" aria-label="Bootstrap">
+                    <use xlink:href="#bootstrap"></use>
+                </svg>
+            </a>
         </div>
-      
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"><!--listado de elementos en desorden-->
-          <li><a href="#" class="nav-link px-4 link-secondary2 header-link">Albor</a></li>
-          <li><a href="#" class="nav-link px-4 header-link">Productos</a></li>
-          <li><a href="#" class="nav-link px-4 header-link">Cotización</a></li>
-          <li><a href="#" class="nav-link px-4 header-link">Contáctanos</a></li>
-        </ul>
-      
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2 custom-button outline">Iniciar sesión</button>
-          <button type="button" class="btn btn-primary custom-button primary">Regístrate</button>
+    
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-4 link-secondary2 header-link">Albor</a></li>
+            <li><a href="#productos" class="nav-link px-4 header-link">Productos</a></li>
+            <li><a href="#" class="nav-link px-4 header-link">Cotización</a></li>
+            <li><a href="#contacto" class="nav-link px-4 header-link">Contáctanos</a></li> </ul>
+    
+        <div class="col-md-3 text-md-end">
+            <button type="button" class="btn btn-outline-primary me-md-2 custom-button outline">Iniciar sesión</button>
+            <button type="button" class="btn btn-primary custom-button primary">Regístrate</button>
         </div>
-      </header>
+    </header>
+    
+    
     <div id="carouselExampleCaptions" class="carousel slide">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -42,32 +43,32 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="image-overlay-container">
-                    <img src="//laveranera.com.co/cdn/shop/products/Mantel1.jpg?v=1682273371&width=2400" class="d-block w-100 hero-image" alt="...">
+                    <img src="public/margarita.png" class="d-block w-100 hero-image" alt="...">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="carousel-caption d-none d-md-block font-text">
-                    <h5 class="custom-h5">First slide label</h5>
-                    <p class="custom-p">Some representative placeholder content for the first slide.</p>
+                    <h5 class="custom-h5">Vela Margarita</h5>
+                    <p class="custom-p">Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita..</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="image-overlay-container">
-                    <img src="//laveranera.com.co/cdn/shop/files/LM4.png?v=1745986874&width=2400" class="d-block w-100 hero-image" alt="...">
+                    <img src="public/virgen.png" class="d-block w-100 hero-image" alt="...">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="carousel-caption d-none d-md-block font-text">
-                    <h5 class="custom-h5">Second slide label</h5>
-                    <p class="custom-p">Some representative placeholder content for the second slide.</p>
+                    <h5 class="custom-h5">Virgen + rosa</h5>
+                    <p class="custom-p">Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual.</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="image-overlay-container">
-                    <img src="//laveranera.com.co/cdn/shop/files/LM1.png?v=1745986874&width=2400" class="d-block w-100 hero-image" alt="...">
+                    <img src="public/oso.png" class="d-block w-100 hero-image" alt="...">
                     <div class="image-overlay"></div>
                 </div>
                 <div class="carousel-caption d-none d-md-block font-text">
-                    <h5 class="custom-h5">Third slide label</h5>
-                    <p class="custom-p">Some representative placeholder content for the third slide.</p>
+                    <h5 class="custom-h5">Osito + Rosa</h5>
+                    <p class="custom-p">Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.</p>
                 </div>
             </div>
         </div>
@@ -80,9 +81,83 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-   
-
+    <section id="productos" class="py-5 bg-white">
+        <div class="container">
+            <h2 class="mb-4 text-center fw-bold text-uppercase" style="color: #343a40;">Descubre Nuestras Colecciones</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="image-container">
+                            <img src="public/osorosa.png" class="card-img-top img-fluid" alt="SET 'LA MAMMA'" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">SET "LA MAMMA": Vela + Tarjetas Escribana</h5>
+                            <p class="card-text small text-muted mb-1">
+                                <del class="me-2">$233,000.00</del>
+                                <span class="text-primary">$218,000.00</span>
+                            </p>
+                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="image-container">
+                            <img src="public/corazonrojado.png" class="card-img-top img-fluid" alt="Vela 'LA MAMMA'" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Vela "LA MAMMA"</h5>
+                            <p class="card-text small text-muted mb-1">
+                                <span class="text-body">$178,000.00</span>
+                            </p>
+                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="image-container">
+                            <img src="public/bouquetflores.png" class="card-img-top img-fluid" alt="LA VELA ELLA" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">LA VELA ELLA</h5>
+                            <p class="card-text small text-muted mb-1">
+                                <span class="text-body">$184,000.00</span>
+                            </p>
+                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
+                        </div>
+                        <div class="card-footer">
+                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+                <img src="public/contactanos.png" class="d-block mx-lg-auto img-fluid" alt="Imagen de Contacto" width="400" height="300" loading="lazy">
+            </div>
+            <div class="col-lg-6">
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">¿Hablamos por WhatsApp?</h1>
+                <p class="lead">Haz clic en el botón de abajo para iniciar una conversación con nosotros a través de WhatsApp.</p>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                    <a href="https://wa.me/3045760304" target="_blank" class="btn btn-success btn-lg px-4 me-md-2 btn-wpp">
+                        <i class="bi bi-whatsapp me-2"></i> Chatea con nosotros
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+</body>
 </html>

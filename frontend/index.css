@@ -23,15 +23,12 @@ header {
   z-index: 2;
 }
 
-.banner {
+.banner{
   background-image: url(public/Logo-Albor.png);
   background-size: cover;
   z-index: 1;
-  background-position: center;
   filter: brightness(0.6);
-  border:none;
 }
-
 nav ul {
   list-style-type: none;
   margin: 0;
@@ -171,7 +168,7 @@ form input[type="submit"] {
   background-size:cover ;
   background-position: center;
   height: 70px;
-  
+  display: flex;
 }
 /* Estilos para la lista ul (contenedor) */
 .nav {
@@ -217,6 +214,7 @@ form input[type="submit"] {
   -webkit-text-stroke:0.3px #FFD700;
   color: #530a58 !important ;
 }
+
 .btn-wpp{
   background-color: #25D366; border-color: #25D366;
 }
@@ -228,4 +226,76 @@ form input[type="submit"] {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.sidebar-hover {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-trigger {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em; /* Ajusta el tamaño del icono */
+    color: #530a58; /* Color del icono */
+    margin-right: 15px; /* Espacio entre el trigger y el logo */
+}
+
+.sidebar-content {
+    position: absolute;
+    top: 100%; /* Para que aparezca debajo del trigger */
+    left: 0;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateY(-10px); /* Pequeño desplazamiento inicial para el efecto */
+}
+
+.sidebar-hover:hover .sidebar-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-content ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar-content ul li a:hover {
+    background-color: #530a5869;
+}
+
+/* Ajustes para el logo container para asegurar el espaciado */
+.logo-container {
+    margin-left: 1px; /* Ajusta este valor según el ancho del trigger y el espacio deseado */
+}
+
+/* Asegurar que el header tenga la posición relativa si es necesario para el sidebar absoluto */
+header {
+    position: relative; /* Añade esto si no está ya */
+}
+
+/* Estilos responsivos (opcional, ajusta según necesites) */
+@media (max-width: 768px) {
+    .sidebar-hover {
+        display: none; /* Ocultar en pantallas pequeñas y usar otro menú */
+    }
+
+    .logo-container {
+        margin-left: 15px; /* Reajustar margen del logo en pantallas pequeñas */
+    }
 }

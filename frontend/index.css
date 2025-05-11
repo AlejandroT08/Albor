@@ -299,3 +299,12 @@ header {
         margin-left: 15px; /* Reajustar margen del logo en pantallas pequeñas */
     }
 }
+.footer-copyright {
+  background-color: #fff5f7;  /* Fondo rosado pálido */
+  color: #080708;             /* Texto rosado oscuro tipo vino */
+  font-weight: 500;
+}
+
+.footer-prueba{
+  align-items:stretch
+}

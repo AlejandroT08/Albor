@@ -11,6 +11,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
+<script>
+  function enviarWhatsApp(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    const texto = `Hola, soy ${nombre}.\nCorreo: ${email}\n\nMe gustaría cotizar lo siguiente:\n${mensaje}`;
+    const numero = "573045760304";  // Tu número de WhatsApp sin signos
+    const enlace = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(enlace, '_blank');
+  }
+</script>
+
 <body >
 
     <header class="fondo-header d-flex flex-wrap align-items-center justify-content-between py-3 mb-1 header-custom-style px-3 px-md-4">
@@ -25,7 +40,7 @@
         <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="#" class="nav-link px-4 link-secondary2 header-link">Albor</a></li>
             <li><a href="#productos" class="nav-link px-4 header-link">Productos</a></li>
-            <li><a href="#" class="nav-link px-4 header-link">Cotización</a></li>
+            <li><a href="#cotizacion" class="nav-link px-4 header-link">Cotización</a></li>
             <li><a href="#contacto" class="nav-link px-4 header-link">Contáctanos</a></li> </ul>
     
         <div class="col-md-auto text-md-end">
@@ -62,7 +77,7 @@
                     <div class="image-overlay"></div>
                 </div>
                 <div class="carousel-caption d-none d-md-block font-text">
-                    <h5 class="custom-h5">Virgen + rosa</h5>
+                    <h5 class="custom-h5">Virgen y rosa</h5>
                     <p class="custom-p">Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual.</p>
                 </div>
             </div>
@@ -72,7 +87,7 @@
                     <div class="image-overlay"></div>
                 </div>
                 <div class="carousel-caption d-none d-md-block font-text">
-                    <h5 class="custom-h5">Osito + Rosa</h5>
+                    <h5 class="custom-h5">Osito y Rosa</h5>
                     <p class="custom-p">Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.</p>
                 </div>
             </div>
@@ -107,9 +122,9 @@
         let productosCargados = 0;
         const productosPorCarga = 6;
         const todosLosProductos = [
-            { nombre: "Oso en madera", descripcion: "Hermoso oso para regalar a una persona especial", imagen: "oso.png" },
-            { nombre: "Producto 2", descripcion: "Descripción 2", imagen: "bouquet.jpeg" },
-            { nombre: "Producto 3", descripcion: "Descripción 3", imagen: "corazonrojado.png" },
+            { nombre: "Osito y Rosa", descripcion: "Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.", imagen: "oso.png" },
+            { nombre: "Bouquet", descripcion: "Bouquet de flores elaborado con cera, esencia delicada y flores secas naturales. Un detalle único que combina belleza, aroma y un toque artesanal para decorar o regalar con estilo.", imagen: "bouquet.jpeg" },
+            { nombre: "Vela corazón largo y Tarjeta", descripcion: "Un detalle que enciende el alma: vela en forma de corazón acompañada de una tarjeta para decir lo que sientes con dulzura y estilo. Hermoso detalle, lindo y económico", imagen: "corazonrojado.png" },
             { nombre: "Producto 4", descripcion: "Descripción 4", imagen: "estrellas.jpeg" },
             { nombre: "Vela Margarita", descripcion: "Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita", imagen: "margarita.png" },
             { nombre: "Virgen y rosa", descripcion: "Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual", imagen: "virgen.png" },
@@ -131,18 +146,26 @@
                     nuevoCol.innerHTML = `
                         <div class="card h-100">
                             <div class="image-container">
-                                <img src="public/${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" loading="lazy">
+                            <img src="public/${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" loading="lazy">
                             </div>
                             <div class="card-body">
-                                <h5 class="card-title">${producto.nombre}</h5>
-                                <p class="card-text small text-muted mb-1">${producto.descripcion}</p>
-                                <a class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
+                            <h5 class="card-title">${producto.nombre}</h5>
+                            <p class="card-text small text-muted mb-1">${producto.descripcion}</p>
+                            <a 
+                            
+                                href="https://wa.me/573045760304?text=${encodeURIComponent(`Hola, quiero saber el precio de este producto:\n\n${producto.nombre}\n${producto.descripcion}\nImagen: https://albor.com/public/${producto.imagen}`)}" 
+                                target="_blank" 
+                                class="btn btn-success btn-sm rounded-pill w-100"
+                            >
+                                <i class="bi bi-whatsapp me-1"></i> Preguntar por WhatsApp
+                            </a>
                             </div>
                             <div class="card-footer">
-                                <small class="text-body-secondary">Cargado</small>
+                            <small class="text-body-secondary">Cargado</small>
                             </div>
                         </div>
-                    `;
+`;
+
                     productosContainer.appendChild(nuevoCol);
                     productosCargados++;
                 }
@@ -176,11 +199,40 @@
                         <i class="bi bi-whatsapp me-2"></i> Chatea con nosotros
                     </a>
                 </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.046384955447!2d-75.614760924184!3d6.2576203261942585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44297b01b9c6d3%3A0x3fff08639ce9d3b7!2sCra.%2096%20%23%2047A-133%2C%20San%20Javier%20II%2C%20Medellín%2C%20San%20Javier%2C%20Medellín%2C%20Antioquia!5e0!3m2!1ses!2sco!4v1746923700275!5m2!1ses!2sco" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
+
+
+
+<section id="cotizacion" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 fw-bold text-uppercase">Solicita tu Cotización</h2>
+    <form class="form-cotizacion ms-0" onsubmit="enviarWhatsApp(event)">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Detalles</label>
+        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success btn-sm">
+        <i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
     
+
+
     <footer class="bg-light text-center text-lg-start mt-5 border-top">
   <div class="footer-prueba">
     <div class="row">

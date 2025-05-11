@@ -85,81 +85,82 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <section id="productos" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="mb-4 text-center fw-bold text-uppercase" style="color: #343a40;">Descubre Nuestras Colecciones</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="image-container">
-                            <img src="public/osorosa.png" class="card-img-top img-fluid" alt="SET 'LA MAMMA'" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">SET "LA MAMMA": Vela + Tarjetas Escribana</h5>
-                            <p class="card-text small text-muted mb-1">
-                                <del class="me-2">$233,000.00</del>
-                                <span class="text-primary">$218,000.00</span>
-                            </p>
-                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="image-container">
-                            <img src="public/corazonrojado.png" class="card-img-top img-fluid" alt="Vela 'LA MAMMA'" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Vela "Corazón Rosado"</h5>
-                            <p class="card-text small text-muted mb-1">
-                                <span class="text-body">$178,000.00</span>
-                            </p>
-                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card h-100">
-                        <div class="image-container">
-                            <img src="public/bouquetflores.png" class="card-img-top img-fluid" alt="LA VELA ELLA" loading="lazy">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">LA VELA ELLA</h5>
-                            <p class="card-text small text-muted mb-1">
-                                <span class="text-body">$184,000.00</span>
-                            </p>
-                            <a href="#contacto" class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-body-secondary">Última actualización hace 3 minutos</small>
-                        </div>
-                    </div>
-                </div>
+
+    
+   <section id="productos" class="py-5 bg-white">
+    <div class="container">
+        <h2 class="section-title text-center fw-bold text-uppercase">Descubre Nuestras Colecciones</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="productos-container">
             </div>
+        <div class="text-center mt-4" id="ver-mas-container">
+            <button id="ver-mas-productos" class="btn btn-outline-secondary rounded-pill">Ver Más</button>
         </div>
-    </section>
-    <section id="contacto" class="container col-xxl-8 px-4 py-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="public/contactanos.png" class="d-block mx-lg-auto img-fluid" alt="Imagen de Contacto" width="400" height="300" loading="lazy">
-            </div>
-            <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">¿Hablamos por WhatsApp?</h1>
-                <p class="lead">Haz clic en el botón de abajo para iniciar una conversación con nosotros a través de WhatsApp.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                    <a href="https://wa.me/3045760304" target="_blank" class="btn btn-success btn-lg px-4 me-md-2 btn-wpp">
-                        <i class="bi bi-whatsapp me-2"></i> Chatea con nosotros
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const verMasBtn = document.getElementById('ver-mas-productos');
+        const verMasContainer = document.getElementById('ver-mas-container');
+        const productosContainer = document.getElementById('productos-container');
+        let productosCargados = 0;
+        const productosPorCarga = 6;
+        const todosLosProductos = [
+            { nombre: "Oso en madera", descripcion: "Hermoso oso para regalar a una persona especial", imagen: "oso.png" },
+            { nombre: "Producto 2", descripcion: "Descripción 2", imagen: "bouquet.jpeg" },
+            { nombre: "Producto 3", descripcion: "Descripción 3", imagen: "corazonrojado.png" },
+            { nombre: "Producto 4", descripcion: "Descripción 4", imagen: "estrellas.jpeg" },
+            { nombre: "Producto 5", descripcion: "Descripción 5", imagen: "margarita.png" },
+            { nombre: "Producto 6", descripcion: "Descripción 6", imagen: "virgen.png" },
+            { nombre: "Producto 7", descripcion: "Descripción 7", imagen: "osorosa.png" },
+            { nombre: "Producto 8", descripcion: "Descripción 8", imagen: "tarros.png" },
+            { nombre: "Producto 9", descripcion: "Descripción 9", imagen: "mariposa.png" },
+            { nombre: "Producto 10", descripcion: "Descripción 10", imagen: "rosa.jpeg" },
+            { nombre: "Producto 11", descripcion: "Descripción 11", imagen: "https://via.placeholder.com/300/ffc107/000000?Text=Producto+11" },
+            { nombre: "Producto 12", descripcion: "Descripción 12", imagen: "https://via.placeholder.com/300/17a2b8/ffffff?Text=Producto+12" },
+            // ... más productos
+        ];
+
+        function cargarProductos(cantidad) {
+            for (let i = 0; i < cantidad; i++) {
+                if (productosCargados < todosLosProductos.length) {
+                    const producto = todosLosProductos[productosCargados];
+                    const nuevoCol = document.createElement('div');
+                    nuevoCol.classList.add('col');
+                    nuevoCol.innerHTML = `
+                        <div class="card h-100">
+                            <div class="image-container">
+                                <img src="public/${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">${producto.nombre}</h5>
+                                <p class="card-text small text-muted mb-1">${producto.descripcion}</p>
+                                <a class="btn btn-outline-primary btn-sm rounded-pill">Ver Detalles</a>
+                            </div>
+                            <div class="card-footer">
+                                <small class="text-body-secondary">Cargado</small>
+                            </div>
+                        </div>
+                    `;
+                    productosContainer.appendChild(nuevoCol);
+                    productosCargados++;
+                }
+            }
+
+            // Ocultar el botón si se cargaron todos los productos
+            if (productosCargados >= todosLosProductos.length) {
+                verMasContainer.style.display = 'none';
+            }
+        }
+
+        // Cargar los primeros 6 productos al cargar la página
+        cargarProductos(productosPorCarga);
+
+        verMasBtn.addEventListener('click', function() {
+            cargarProductos(productosPorCarga);
+        });
+    });
+</script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

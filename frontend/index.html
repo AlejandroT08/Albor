@@ -56,7 +56,7 @@
             <a href="/frontend/login/login.html" class="text-decoration-none">
         <button type="button" class="btn btn-outline-primary me-md-2 custom-button outline">Iniciar sesión</button>
             </a>
-            <a href="ruta/a/registro.html" class="text-decoration-none">
+            <a href="/frontend/register/register.html" class="text-decoration-none">
         <button type="button" class="btn btn-primary custom-button primary">Regístrate</button>
             </a>
 </div>
@@ -136,20 +136,27 @@
         const productosContainer = document.getElementById('productos-container');
         let productosCargados = 0;
         const productosPorCarga = 6;
-        const todosLosProductos = [ //Es un array con objetos de productos, que luego se insertan dinámicamente en el DOM.
-            { nombre: "Osito y Rosa", descripcion: "Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.", imagen: "oso.png" },
-            { nombre: "Bouquet", descripcion: "Bouquet de flores elaborado con cera, esencia delicada y flores secas naturales. Un detalle único que combina belleza, aroma y un toque artesanal para decorar o regalar con estilo.", imagen: "bouquet.jpeg" },
-            { nombre: "Vela corazón largo y Tarjeta", descripcion: "Un detalle que enciende el alma: vela en forma de corazón acompañada de una tarjeta para decir lo que sientes con dulzura y estilo. Hermoso detalle, lindo y económico", imagen: "corazonrojado.png" },
-            { nombre: "Producto 4", descripcion: "Descripción 4", imagen: "estrellas.jpeg" },
-            { nombre: "Vela Margarita", descripcion: "Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita", imagen: "margarita.png" },
+        const todosLosProductos = [
+            { nombre: "Osito y Rosa", descripcion: "Osito y rosa en cera, con un exquisito aroma. Incluye base de madera natural y stickers personalizables para que lo hagas único.", imagen: "oso.png" , precioActual: 85000},
+            { nombre: "Bouquet", descripcion: "Bouquet de flores elaborado con cera, esencia delicada y flores secas naturales. Un detalle único que combina belleza, aroma y un toque artesanal para decorar o regalar con estilo.", imagen: "bouquet.jpeg", precioActual: 85000 },
+            { nombre: "Vela corazón largo y Tarjeta", descripcion: "Un detalle que enciende el alma: vela en forma de corazón acompañada de una tarjeta para decir lo que sientes con dulzura y estilo. Hermoso detalle, lindo y económico", imagen: "corazonrojado.png", precioActual: 90000 },
+            { nombre: "Producto 4", descripcion: "Descripción 4", imagen: "estrellas.jpeg", precioActual: 20000 },
+            { nombre: "Vela Margarita", descripcion: "Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita", imagen: "margarita.png", precioActual: 65000 },
+            { nombre: "Virgen y rosa", descripcion: "Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual", imagen: "virgen.png", precioActual: 65000 },
+            { nombre: "Producto 7", descripcion: "Descripción 7", imagen: "osorosa.png", precioActual:85000 },
+            { nombre: "Osito y Rosa", descripcion: "...", imagen: "tarros.png", precioActual: 20000 },
+            { nombre: "Producto 9", descripcion: "Descripción 9", imagen: "mariposa.png", precioActual: 85000 },
+            { nombre: "Producto 10", descripcion: "Descripción 10", imagen: "rosa.jpeg", precioActual: 85000 },
+            { nombre: "Producto 11", descripcion: "Descripción 11", imagen: "https://via.placeholder.com/300/ffc107/000000?Text=Producto+11", precioActual: 85000 },
+            { nombre: "Producto 12", descripcion: "Descripción 12", imagen: "https://via.placeholder.com/300/17a2b8/ffffff?Text=Producto+12", precioActual: 85000 },
+            { nombre: "Vela Margarita", descripcion: "Nuestra flor margarita en cera está hecha a mano con amor, ideal para decorar, regalar o simplemente llenar de belleza cualquier rincón. Una flor eterna que nunca se marchita", imagen: "margarita.png", precioActual: 85000 },
             { nombre: "Virgen y rosa", descripcion: "Hermosa virgen y rosa en cera, con una base de madera natural. Una pieza llena de ternura y devoción, ideal para regalar o crear un rincón espiritual", imagen: "virgen.png" },
-            { nombre: "Producto 7", descripcion: "Descripción 7", imagen: "osorosa.png" },
-            { nombre: "Producto 8", descripcion: "Descripción 8", imagen: "tarros.png" },
-            { nombre: "Producto 9", descripcion: "Descripción 9", imagen: "mariposa.png" },
-            { nombre: "Producto 10", descripcion: "Descripción 10", imagen: "rosa.jpeg" },
-            { nombre: "Producto 11", descripcion: "Descripción 11", imagen: "https://via.placeholder.com/300/ffc107/000000?Text=Producto+11" },
-            { nombre: "Producto 12", descripcion: "Descripción 12", imagen: "https://via.placeholder.com/300/17a2b8/ffffff?Text=Producto+12" },
-            // ... más productos
+            { nombre: "Producto 7", descripcion: "Descripción 7", imagen: "osorosa.png", precioActual: 85000 },
+            { nombre: "Osito y Rosa", descripcion: "...", imagen: "tarros.png", precioActual: 20000 },
+            { nombre: "Producto 9", descripcion: "Descripción 9", imagen: "mariposa.png", precioActual: 50000 },
+            { nombre: "Producto 7", descripcion: "Descripción 7", imagen: "osorosa.png", precioActual: 85000  },
+            { nombre: "Producto 11", descripcion: "Descripción 11", imagen: "https://via.placeholder.com/300/ffc107/000000?Text=Producto+11", precioActual: 85000 },
+            { nombre: "Producto 12", descripcion: "Descripción 12", imagen: "https://via.placeholder.com/300/17a2b8/ffffff?Text=Producto+12", precioActual: 85000 },
         ];
 
         function cargarProductos(cantidad) {
@@ -159,27 +166,24 @@
                     const nuevoCol = document.createElement('div');
                     nuevoCol.classList.add('col');
                     nuevoCol.innerHTML = `
-                        <div class="card h-100">
-                            <div class="image-container">
+                    <div class="card h-100">
+                        <div class="image-container">
                             <img src="public/${producto.imagen}" class="card-img-top img-fluid" alt="${producto.nombre}" loading="lazy">
-                            </div>
-                            <div class="card-body">
+                        </div>
+                        <div class="card-body">
                             <h5 class="card-title">${producto.nombre}</h5>
-                            <p class="card-text small text-muted mb-1">${producto.descripcion}</p>
-                            <a 
-                            
-                                href="https://wa.me/573045760304?text=${encodeURIComponent(`Hola, quiero saber el precio de este producto:\n\n${producto.nombre}\n${producto.descripcion}\nImagen: https://albor.com/public/${producto.imagen}`)}" 
-                                target="_blank" 
+                            <p class="card-text small text-muted mb-2">${producto.descripcion}</p>
+                            <p class="fw-bold mb-2 precioActual" > Precio Actual: <span style="color: black;">$${producto.precioActual}</span></p>
+                            <a
+                                href="https://wa.me/573045760304?text=${encodeURIComponent(`Hola, quiero saber el precio de este producto:\n\n${producto.nombre}\n${producto.descripcion}\nImagen: https://albor.com/public/${producto.imagen}`)}"
+                                target="_blank"
                                 class="btn btn-success btn-sm rounded-pill w-100"
                             >
                                 <i class="bi bi-whatsapp me-1"></i> Preguntar por WhatsApp
                             </a>
-                            </div>
-                            <div class="card-footer">
-                            <small class="text-body-secondary">Cargado</small>
-                            </div>
                         </div>
-`;
+                    </div>
+                `;
 
                     productosContainer.appendChild(nuevoCol);
                     productosCargados++;
@@ -227,26 +231,29 @@
 <!-- Formulario de cotización-->
 
 <section id="cotizacion" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4 fw-bold text-uppercase">Solicita tu Cotización</h2>
-    <form class="form-cotizacion ms-0" onsubmit="enviarWhatsApp(event)">
-      <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="text" class="form-control" id="nombre" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Detalles</label>
-        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-success btn-sm">
-        <i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp
-      </button>
-    </form>
-  </div>
+    <div class="container">
+        <h2 class="mb-4 fw-bold text-uppercase text-h2">Solicita tu Cotización</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6"> <form class="form-cotizacion" onsubmit="enviarWhatsApp(event)">
+                    <div class="mb-3 ">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Detalles</label>
+                        <textarea class="form-control" id="mensaje" rows="3" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-sm">
+                        <i class="bi bi-whatsapp me-1"></i> Enviar por WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </section>
 
     
@@ -257,22 +264,22 @@
     <div class="row">
       <!-- Sección de texto -->
       <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
-        <h5 class="text-uppercase">Albor</h5>
-        <p>Gracias por visitarnos. Si tienes dudas, contáctanos por WhatsApp o correo.</p>
+        <h5 class="text-uppercase h5-text">Albor</h5>
+        <p class="p-text">Gracias por visitarnos. Si tienes dudas, contáctanos por WhatsApp o correo.</p>
       </div>
 
       <!-- Sección de contacto -->
       <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
-        <h5 class="text-uppercase">Contacto</h5>
+        <h5 class="text-uppercase h5-text">Contacto</h5>
         <ul class="list-unstyled mb-0">
-          <li><a href="mailto:danylopera14@gmail.com" class="text-dark">danylopera14@gmail.com</a></li>
-          <li><a href="https://wa.me/573045760304" target="_blank" class="text-dark">WhatsApp</a></li>
+          <li><a href="mailto:danylopera14@gmail.com" class="text-dark p-text">danylopera14@gmail.com</a></li>
+          <li><a href="https://wa.me/573045760304" target="_blank" class="text-dark p-text">WhatsApp</a></li>
         </ul>
       </div>
 
       <!-- Redes sociales -->
       <div class="col-lg-4 col-md-4 mb-4 mb-md-0 text-center">
-        <h5 class="text-uppercase">Síguenos</h5>
+        <h5 class="text-uppercase h5-text">Síguenos</h5>
         <a href="https://facebook.com" class="me-3 text-dark" target="_blank"><i class="bi bi-facebook fs-4"></i></a>
         <a href="https://www.instagram.com/albor.velasydetalles?igsh=bmFjc3MxYWkycTkz" class="me-3 text-dark" target="_blank"><i class="bi bi-instagram fs-4"></i></a>
 
